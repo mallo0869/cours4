@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --body-default-color: #333;
+    --primary-color: #242B60;
+    --secondary-color: #2d7d92;
+    --tertiary-color: #51B1E8;
+    --light-1: #fff;
+    --body-background: #f7f7f7;
+} 
+body {
+    background: var(--body-background);
+    color: var(--body-default-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+}
+.flex-row {
+    flex-direction: row;
+}
+.upper {
+    text-transform: uppercase;
+}
+.text-center {
+    text-align: center;
+}
+
+
+.c-l1 {
+    color: var(--light-1);
+}
+
+.c-secondary {
+color: var(--secondary-color);
+}
+.c-tertiary {
+    color: var(--tertiary-color);
+}
+
+.block {
+    display: block;
+}
+.ib {
+    display: inline-block;
+}
+.bold {
+font-weight: bold;
+}
+.bg-primary {
+    background-color: var(--primary-color);
+}
+.bg-secondary {
+    background-color: var(--secondary-color);
+}
+.bg-tertiary {
+    background-color: var(--tertiary-color);
+}
+.flex-grow > *, .grow {
+    flex-grow: 1;
+}
+.flex-end {
+    justify-content: flex-end
+}
+.text-right {
+    text-align: right;
+}
+
+
+.sep {
+    width: 2px;
+    height: 120px;
+    margin: 1rem;
+    background-color: black;
+    flex-grow: initial;
+}
+
+
+.seller-info {
+    text-decoration: none;
+    color: var(--body-default-color);
+    margin: 1rem 0;
+    h3 {
+        margin: 0.3rem 0 1.3rem;
+    }
+    .seller-picture {
+        padding: 0 0 0 1rem;
+    }
+}
+.card {
+    position: relative;
+    padding: 1rem 0;
+    overflow: hidden;
+    .card-badge {
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        .badge {
+            display: flex;
+            height: 90px;
+            width: 90px;
+            background-color: var(--primary-color);
+            color: #fff;
+            flex-direction: column;
+            justify-content: space-around;
+            > div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            b {
+                display: block;
+                font-size: 0.7rem;
+                margin-top: 0.2rem;
+            }
+        }
+    }
+
+
+    .card-slider {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .gallery-cell {
+            height: 265px;
+            width: 33%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        // img {
+        //     max-width: 100%;
+        // }
+    }
+    .card-address {
+        align-items: center;
+        p {
+            padding: 0;
+            margin: 0;
+        }
+        p + p {
+            padding: 0.2rem 0 0;
+        }
+        .city {
+            min-width: 150px;
+            font-size: 1.3rem;
+            padding: 0 1rem;
+        }
+        .address {
+            padding: 0 1.2rem;
+        }
+    }
+    .card-attributes {
+        margin: 1rem 0;
+        font-size: 1rem;
+        ul {
+            list-style: none;
+            margin: 0 0 0 1.5rem;
+            padding: 0;
+            li {
+                margin-top: 0.7rem;
+                & + li {
+                    margin-left: 1.2rem;
+                }
+            }
+        }
+        
+        p {
+            margin: 0;
+            &.price {
+                font-weight: bold;
+                font-size: 1.3rem;
+                line-height: 3rem;
+                padding: 0 2.4rem;
+            }
+        }
+        svg {
+            fill: #fff;
+            display: inline;
+        }
+    }
+
+    .card-inner {
+        padding: 2rem 0;
+        nav {
+            ul {
+                list-style: none;
+                display:flex;
+                padding: 0;
+                margin: 0;
+                li {
+                    &> * {
+                        padding: 0.6rem 1.5rem;
+                        text-decoration: none;
+                        line-height: 2.2rem;
+                    }                  
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .stack {
+        flex-direction: column;
+    }
+    .sep {
+        display: none;
+    }
+}
